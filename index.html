@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/welcome.css">
     <link rel="stylesheet" href="./css/todolist.css">
+    <link rel="stylesheet" href="./css/modal.css">
 </head>
 <body>
     <div id="root">
@@ -56,11 +57,31 @@
                     </ul>
                 </div>
             </main>
+            <div class="modal invisible">
+                <div class="modal-container">
+                    <header class="modal-header">
+                        <h1 class="modal-title">
+                            제목
+                        </h1>
+                    </header>
+                    <main class="modal-main">
+                        <p class="modal-message">
+                            메세지 내용
+                        </p>
+                        <input type="text" class="text-input w-f">
+                    </main>
+                    <footer class="modal-footer">
+                        <button class="btn">확인</button>
+                        <button class="btn">닫기</button>
+                    </footer>
+                </div>
+            </div> 
         </div>
     </div>
     <script src="./js/index.js"></script>
     <script src="./js/utils.js"></script>
     <script src="./js/routes.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/sidebar.js"></script>
     <script src="./js/welcome.js"></script>
     <script src="./js/todolist.js"></script>
