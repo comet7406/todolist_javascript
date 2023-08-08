@@ -1,0 +1,25 @@
+.app-header-bar-start {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    width: 438px;
+    height: 32px;
+}
+
+.list-bars {
+    border: 2px solid #dbdbdb;
+    border-radius: 5px;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(0, 0, 0, 0);
+
+}
+
+.list-bars {
+    opacity: 100%;
+}
+
+.list-bars .fa-solid {
+    color:#dbdbdb;
+}
+

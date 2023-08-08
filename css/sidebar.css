@@ -1,9 +1,9 @@
 .sidebar {
     transition: left 1s ease;
     position: absolute;
-    top: 0px;
+    top: 0;
     left: -200px;
-    border-right: 1px solid #dbdbdb;
+    border-right: 2px solid #dbdbdb;
     width: 200px;
     height: 100%;
     background-color: white;
@@ -43,9 +43,10 @@
     border-bottom: 2px solid #dbdbdb;
     padding: 10px;
     height: 60px;
-    background-image: linear-gradient(to bottom right, #eee, white);
+    background-image: linear-gradient(to right, #8CA6DB, #B993D6);
     font-size: 20px;
     font-weight: 700;
+    color:white;
 }
 
 .sidebar-menu-list {
@@ -57,6 +58,7 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #dbdbdb;
+    background-image: linear-gradient(to bottom right, #eee, white);
     height: 40px;
     font-size: 12px;
     font-weight: 700;
@@ -65,6 +67,7 @@
 
 .menu-items:hover {
     background-color: #eee;
+    border-bottom: 1px solid #FF5722;
 }
 
 .menu-items:active {
