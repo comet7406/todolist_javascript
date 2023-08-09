@@ -60,10 +60,10 @@
 
                         </li>
                         <div class="item-right">
-                            <p class="todolist-date">2023-08-03</p>
+                            <p id="selected-date" class="todolist-date">2023-08-03</p>
                             <div class="todolist-item-buttons">
                                 <button class="btn btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btn btn-calender"><i class="fa-solid fa-calendar-days"></i></button>
+                                <button class="btn btn-calendar"><i class="fa-solid fa-calendar-days"></i></button>
                                 <button class="btn btn-remove"><i class="fa-solid fa-trash-can"></i></button>
                             </div>
                         </div>
@@ -89,32 +89,35 @@
                     </footer>
                 </div>
             </div>
-            <div class="calendar">
+            <div class="calendar invisible">
                 <div class="calendar-container">
                     <header class="calendar-header">
-                        <h1 class="calendar-title">2023년 8월</h1>
-                        <div class="my-calender clearfix">
-                            <div class="calender-box">
-                                <div class="ctr-box clearfix">
-                                    <button class="btn-cal prev">
-                                        ◀<!-- <i class="fa-solid fa-angle-left"></i> -->
-                                    </button>
-                                    <button class="btn-cal next">
-                                        ▶<!-- <i class="fa-solid fa-angle-right"></i> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                        <button id="beforebtn" class="btn-cal prev">◀</button>
+                        <div class="calendar-month"></div>
+                        <button id="nextbtn" class="btn-cal next">▶</button>
                     </header>
-                    <div class="calendar-main" id="calendar-main">
-                        <div class="day">일</div>
-                        <div class="day">월</div>
-                        <div class="day">화</div>
-                        <div class="day">수</div>
-                        <div class="day">목</div>
-                        <div class="day">금</div>
-                        <div class="day">토</div>
+                    <div class="calendar-wrapper">
+                        <table class="calendar-table">
+                            <thead class="calendar-thead">
+                                <tr>
+                                    <th>일</th>
+                                    <th>월</th>
+                                    <th>화</th>
+                                    <th>수</th>
+                                    <th>목</th>
+                                    <th>금</th>
+                                    <th>토</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendar-body" class="calendar-tbody">
+                                
+                            </tbody>
+                        </table>
                     </div>
+                    <footer class="calendar-footer">
+                        <button class="btn">확인</button>
+                        <button class="btn">닫기</button>
+                    </footer>
                 </div>
             </div>
         </div>

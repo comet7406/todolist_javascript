@@ -37,6 +37,11 @@ const modifyTodoOnClickHandle = (target) => {
     modifyModal(TodoListService.getInstance().getTodoById(target.value));
 }
 
+const calendarOnClickHandle = (target) => {
+    openCalendarModal();
+    modifyModal(TodoListService.getInstance().getTodoById(target.value));
+}
+
 const deleteTodoOnClickHandle = (target) => {
     TodoListService.getInstance().removeTodo(target.value);
 }
@@ -157,7 +162,7 @@ class TodoListService {
                         <p class="todolist-date">${todo.createDate}</p>
                         <div class="todolist-item-buttons">
                             <button class="btn btn-edit" value="${todo.id}" onclick="modifyTodoOnClickHandle(this);"><i class="fa-solid fa-pen-to-square"></i></button>
-                            <button class="btn btn-calender" value="${todo.id}"><i class="fa-solid fa-calendar-days"></i></button>
+                            <button class="btn btn-calendar" value="${todo.id}" onclick="calendarOnClickHandle(this);"><i class="fa-solid fa-calendar-days"></i></button>
                             <button class="btn btn-remove" value="${todo.id}" onclick="deleteTodoOnClickHandle(this);"><i class="fa-solid fa-trash-can"></i></button>
                         </div>
                     </div>

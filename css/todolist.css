@@ -126,17 +126,17 @@
     color:white;
 }
 
-.btn-calender {
+.btn-calendar {
     margin: 0px 2px;
     font-size: 11px;
     color: #ffff00;
 }
 
-.btn-calender .fa-solid {
+.btn-calendar .fa-solid {
     color: #9575CD;
 }
 
-.btn-calender:active {
+.btn-calendar:active {
     background-color: #ffff00;
     color:white;
 }

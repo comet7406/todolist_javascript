@@ -4,11 +4,11 @@ const sidebarToggleButtonOnClickHandle = () => {
 
     if(sidebar.classList.contains("isSidebarOpen")) {
         sidebar.classList.remove("isSidebarOpen");
-        sidebarToggleButton.innerHTML = '▶';
+        // sidebarToggleButton.innerHTML = '▶';
 
     }else {
         sidebar.classList.add("isSidebarOpen");
-        sidebarToggleButton.innerHTML = '◀';
+        // sidebarToggleButton.innerHTML = '◀';
     }
 }
 
