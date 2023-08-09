@@ -40,15 +40,13 @@ function showCalendar() {
     monthDisplay.textContent = `${calendarDate.getFullYear()}년 ${calendarDate.getMonth() + 1}월 ${calendarDate.getDate()}일`;
 }
 
-// Define the formatDate function
+
 function formatDate(date) {
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
   return date.toLocaleDateString(undefined, options);
 }
 
-// ... (rest of your code)
 
-// Now you can use the formatDate function
 function handleDateClick(date) {
 const selectedDate = new Date(calendarDate.getFullYear(), calendarDate.getMonth(), date);
 const formattedDate = formatDate(selectedDate);
@@ -56,8 +54,6 @@ const formattedDate = formatDate(selectedDate);
 const todolistDate = document.querySelector(".todolist-date");
 todolistDate.textContent = formattedDate;
 }
-
-// ... (rest of your code)
 
 
 function beforeMonth() {
@@ -91,9 +87,6 @@ const closeCalendarModal = () => {
 const modifyCalendarSubmitButtonOnClick = (id) => {
   const newCreateDate = document.querySelector(".todolist-date").value;
   const todo = TodoListService.getInstance().getTodoById(id);
-  // if(todo.todoContent === newTodoContent || !newTodoContent) {
-  //     return;
-  // }
   const todoObj = {
       ...todo,
       createDate: newCreateDate
