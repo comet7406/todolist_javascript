@@ -39,7 +39,7 @@ const modifyTodoOnClickHandle = (target) => {
 
 const calendarOnClickHandle = (target) => {
     openCalendarModal();
-    modifyModal(TodoListService.getInstance().getTodoById(target.value));
+    // calendarModal(TodoListService.getInstance().getTodoById(target.value));
 }
 
 const deleteTodoOnClickHandle = (target) => {

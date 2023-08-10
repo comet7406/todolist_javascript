@@ -34,7 +34,7 @@
     align-items: center;
     margin: 10px 0px;
     border: 1px solid #dbdbdb;
-    border-radius: 10px;
+    border-radius: 5px;
     border-width: 1px 0px;
     padding: 10px;
     width: 330px;
@@ -56,19 +56,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     border: 1px solid #dbdbdb;
     border-radius: 4px;
     width: 20px;
     height: 20px;
     cursor: pointer;
+    background-color: rgb(100, 150, 220);
 }
 
 .complet-chkboxs:checked + label::after {
-    content: " ";
-    border-radius: 2px;
-    width: 10px;
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 3px;
+    top: -1px;
+    width: 6px;
     height: 10px;
-    background-color: #ffbb00;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+    color: white;
 }
 
 .item-center {
@@ -99,7 +109,6 @@
 .btn-edit {
     margin: 0px 2px;
     font-size: 11px;
-    color: #ffff00;
 }
 
 .btn-edit .fa-solid {
@@ -114,7 +123,6 @@
 .btn-remove {
     margin: 0px 2px;
     font-size: 11px;
-    color: #ff4400;
 }
 
 .btn-remove .fa-solid {
