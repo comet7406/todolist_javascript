@@ -38,15 +38,15 @@ const modifyTodoOnClickHandle = (target) => {
 }
 
 const calendarOnClickHandle = (target) => {
-    const todoId = target.value;
-    const todo = TodoListService.getInstance().getTodoById(todoId);
-    const todoDate = new Date(todo.createDate);
-    const year = todoDate.getFullYear();
-    const month = todoDate.getMonth() + 1;
-    openCalendarModal();
-    calendarModal(year, month);
+    // const todoId = target.value;
+    // const todo = TodoListService.getInstance().getTodoById(todoId);
+    // const todoDate = new Date(todo.createDate);
+    // const year = todoDate.getFullYear();
+    // const month = todoDate.getMonth() + 1;
     // openCalendarModal();
-    // calendarModal(TodoListService.getInstance().getTodoById(target.value));
+    // calendarModal(year, month);
+    openCalendarModal();
+    calendarModal(TodoListService.getInstance().getTodoById(target.value));
 }
 
 const deleteTodoOnClickHandle = (target) => {

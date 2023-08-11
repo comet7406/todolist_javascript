@@ -28,12 +28,12 @@ const modifyModal = (todo) => {
         <div class="modal-container">
             <header class="modal-header">
                 <h1 class="modal-title">
-                    ToDo 수정
+                    CORRECTION
                 </h1>
             </header>
             <main class="modal-main">
                 <p class="modal-message">
-                    ToDo를 수정해주세요.
+                    Please fix ToDo         
                 </p>
                 <input type="text" class="text-input w-f" value="${todo.todoContent}">
             </main>

@@ -78,3 +78,73 @@ document.getElementById("beforebtn").addEventListener("click", beforeMonth);
 document.getElementById("nextbtn").addEventListener("click", nextMonth);
 
 showCalendar();
+
+const openCalendarModal = () => {
+const calendar = document.querySelector(".calendar");
+calendar.classList.remove("invisible");
+}
+
+const closeCalendarModal = () => {
+const calendar = document.querySelector(".calendar");
+calendar.classList.add("invisible");
+const calendarBody = document.getElementById("calendar-body");
+calendarBody.innerHTML = "";
+}
+
+const calendarModal = (year, month) => {
+
+const calendar = document.querySelector(".calendar");
+const calendarBody = document.getElementById("calendar-body");
+if (!calendarBody) {
+
+    const tbody = document.createElement("tbody");
+        tbody.id = "calendar-body";
+        tbody.className = "calendar-tbody";
+        const table = calendar.querySelector(".calendar-table");
+        table.appendChild(tbody);
+        }
+
+const existingCalendar = calendar.querySelector(".calendar-container");
+
+if(existingCalendar) {
+    const calendarMonth = existingCalendar.querySelector(".calendar-month");
+    calendarMonth.textContent = `${year}년 ${month}월`;
+    showCalendar();
+} else {
+    calendar.innerHTML = `
+    <div class="calendar-container">
+    <header class="calendar-header">
+        <button id="beforebtn" class="btn-cal prev">◀</button>
+        <div class="calendar-month">${year}년 ${month}월</div>
+        <button id="nextbtn" class="btn-cal next">▶</button>
+    </header>
+    <div class="calendar-wrapper">
+        <table class="calendar-table">
+            <thead class="calendar-thead">
+                <tr>
+                    <th>일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th>토</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body" class="calendar-tbody">
+                
+            </tbody>
+        </table>
+    </div>
+    <footer class="calendar-footer">
+        <button class="btn" onclick="closeCalendarModal();">확인</button>
+        <button class="btn" onclick="closeCalendarModal();">닫기</button>
+    </footer>
+    </div>
+`;
+
+showCalendar();
+
+}
+}
+  
