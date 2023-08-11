@@ -22,9 +22,15 @@ function showCalendar() {
         const content = document.createElement("div");
         const contentText = document.createElement("span");
         contentText.textContent = currentDate.getDate();
-        contentText.addEventListener("click", () => {
-            handleDateClick(currentDate.getDate());
-        });
+        (function(date) {
+            contentText.addEventListener("click", function() {
+                handleDateClick(date.getDate());
+            });
+        })(new Date(currentDate.getTime()));
+        
+        // contentText.addEventListener("click", () => {
+        //     handleDateClick(currentDate.getDate());
+        // });
         content.appendChild(contentText);
         cell.appendChild(content);
         weekRow.appendChild(cell);
@@ -37,7 +43,7 @@ function showCalendar() {
         currentDate.setDate(currentDate.getDate() + 1);
     }
 
-    monthDisplay.textContent = `${calendarDate.getFullYear()}년 ${calendarDate.getMonth() + 1}월 ${calendarDate.getDate()}일`;
+    monthDisplay.textContent = `${calendarDate.getFullYear()}년 ${calendarDate.getMonth() + 1}월`;
 }
 
 
