@@ -4,7 +4,8 @@ class DateUtils {
             return value;
         }
 
-        return `0${value}`;
+        return `${value}`;
+        // return `0${value}`;
     }
 
     static toStringByFormatting(date) {
@@ -12,6 +13,6 @@ class DateUtils {
         const month = this.leftPad(date.getMonth() + 1);
         const day = this.leftPad(date.getDate());
 
-        return [year, month, day].join(". ");
+        return [year + "년 " +  month + "월 " + day + "일 "];
     }
 }

@@ -38,7 +38,14 @@ const modifyTodoOnClickHandle = (target) => {
 }
 
 const calendarOnClickHandle = (target) => {
+    const todoId = target.value;
+    const todo = TodoListService.getInstance().getTodoById(todoId);
+    const todoDate = new Date(todo.createDate);
+    const year = todoDate.getFullYear();
+    const month = todoDate.getMonth() + 1;
     openCalendarModal();
+    calendarModal(year, month);
+    // openCalendarModal();
     // calendarModal(TodoListService.getInstance().getTodoById(target.value));
 }
 
@@ -48,7 +55,6 @@ const deleteTodoOnClickHandle = (target) => {
 
 const generateTodoObj = () => {
     const todoContent = document.querySelector(".todolist-header-items .text-input").value;
-    
     const todoObj = {
         id: 0,
         todoContent: todoContent,

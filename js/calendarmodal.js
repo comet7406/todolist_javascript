@@ -1,4 +1,4 @@
-const openCalendarModal = () => {
+  const openCalendarModal = () => {
     const calendar = document.querySelector(".calendar");
     calendar.classList.remove("invisible");
   }
@@ -9,9 +9,18 @@ const openCalendarModal = () => {
     calendar.innerHTML = "";
   }
   
-  const calendarModal = () => {
+  const calendarModal = (year, month) => {
     const calendar = document.querySelector(".calendar");
-    calendar.innerHTML = `
+    // const calendarBody = document.getElementById("calendar-body");
+
+    const existingCalendar = calendar.querySelector(".calendar-container");
+
+    if(existingCalendar) {
+      const calendarMonth = document.querySelector(".calendar-month");
+      calendarMonth.textContent = `${year}년 ${month}월`;
+      showCalendar();
+    } else {
+      calendar.innerHTML = `
       <div class="calendar-container">
         <header class="calendar-header">
             <button id="beforebtn" class="btn-cal prev">◀</button>
@@ -42,6 +51,5 @@ const openCalendarModal = () => {
         </footer>
       </div>
     `;
-
-    showCalendar();
+    }
   }
